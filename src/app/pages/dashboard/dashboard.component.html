@@ -1,0 +1,46 @@
+
+<ejs-sidebar id="default-sidebar" #sidebar (created)="onCreated($event)" style="visibility: hidden" [width]="width" [showBackdrop]="showBackdrop" [closeOnDocumentClick]="closeOnDocumentClick">
+    <div class="title"> <h1> Menu </h1></div>
+    <div class="sub-title">
+        <h3>    Bienvenido @Usuario </h3>
+    </div>
+    <!-- <div class="center-align">
+        <button ejs-button id="close" class="btn btn-sm btn-primary e-btn close-btn">Close Sidebar</button>
+    </div> -->
+    <div class="dock">
+        <ul class="list-group" style="cursor: pointer;">
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/pivot-table" routerLinkActive="active">Tabla Pivote</li>
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/calendar" routerLinkActive="active">Calendario</li>
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/hoja-calculo" routerLinkActive="active">Hoja de calculo</li>
+            <!-- <li  (click)="closeClick()" class="list-group-item" routerLink="/dashboard-layout" routerLinkActive="active">Layout de dasboard</li> -->
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/query-builder" routerLinkActive="active">Constructor de consultas</li>
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/grid" routerLinkActive="active">Grid</li>
+            <li  (click)="closeClick()" class="list-group-item" routerLink="/charts" routerLinkActive="active">Graficas</li>
+
+
+          </ul>
+    </div>
+</ejs-sidebar>
+<div>
+    <div class="control-container">
+        <ejs-appbar colorMode="Primary">
+          <button (click)="toggleClick()" class="btn btn-sm btn-light"  #regularBtn ejs-button cssClass="e-inherit" iconCss="e-icons e-menu"></button>
+          <span class="regular" style="margin:0 5px">Menu</span>
+          <div class="e-appbar-spacer"></div>
+        </ejs-appbar>
+      </div>
+
+      <div class="container"> 
+        <router-outlet></router-outlet>
+      </div>
+</div>
+
+<!-- <ejs-sidebar #dockBar id="dockSidebar" [enableDock]='enableDock' [width]='width' [dockSize]='dockSize'>
+ 
+</ejs-sidebar>
+<div id="main-content container-fluid col-md-12 ">
+    <div class="title">Main content</div>
+    <div class="sub-title"> Click the expand icon to open and collapse icons to close the Sidebar.</div>
+</div>
+<div>
+</div> -->

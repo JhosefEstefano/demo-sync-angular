@@ -1,0 +1,29 @@
+<!-- <ejs-querybuilder width="70%"  #querybuilder>
+    <e-columns>
+      <e-column field="EmployeeID" label="Employee ID" type="number"></e-column>
+      <e-column field="FirstName" label="First Name" type="string"></e-column>
+      <e-column field="TitleOfCourtesy" label="Title Of Courtesy" type="boolean" [values]="values"></e-column>
+      <e-column field="Title" label="Title" type="string"></e-column>
+      <e-column field="HireDate" label="Hire Date" type="date" format="dd/MM/yyyy"></e-column>
+      <e-column field="Country" label="Country" type="string"></e-column>
+      <e-column field="City" label="City" type="string"></e-column>
+    </e-columns>
+  </ejs-querybuilder>
+
+
+
+  <textarea id="ruleContent">{{displayRule}}</textarea> -->
+<ejs-querybuilder #querybuilder class="row" width="70%" [dataSource]="data" [rule]="importRules">
+  <e-columns>
+    <e-column field="TaskID" label="Task ID" type="number"></e-column>
+    <e-column field="Name" label="Name" type="string"></e-column>
+    <e-column field="Category" label="Category" type="string"></e-column>
+    <e-column field="SerialNo" label="SerialNo" type="string"></e-column>
+    <e-column field="InvoiceNo" label="InvoiceNo" type="string"></e-column>
+    <e-column field="Status" label="Status" type="string"></e-column>
+  </e-columns>
+</ejs-querybuilder>
+<button class="e-btn e-primary e-qb-button" (click)="getSql()">Get Sql</button>
+<button class="e-btn e-primary e-qbr-button" (click)="getJson()">Get Json</button>
+<ejs-dialog #dialog [header]="promptHeader" [animationSettings]="animationSettings" [showCloseIcon]='showCloseIcon'
+  [height]="height" [width]="width" [visible]="hidden"></ejs-dialog>

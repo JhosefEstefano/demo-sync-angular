@@ -1,0 +1,29 @@
+<div  class="container">
+    <ejs-grid #grid id='grid' height=500 [dataSource]='data' [toolbar]='toolbarOptions' [allowPdfExport]='true'  [allowExcelExport]='true'
+    (excelExportComplete)='excelExportComplete()' (pdfExportComplete)='pdfExportComplete()' (toolbarClick)='toolbarClick($event)' [allowPaging]="true" [allowSorting]="true" [pageSettings]='pageSettings'  [allowFiltering]="true" [allowGrouping]="true" [enableVirtualization]="true" [enableColumnVirtualization]="true">
+        <e-columns>
+            <e-column field='CodigoBodega' headerText='Código Bodega' textAlign='Center'  width='200px'></e-column>
+            <e-column field='Bodega' headerText='Bodega' width='200px'></e-column>
+            <e-column field='Serie' headerText='Serie' format='C2' width='200px'></e-column>
+            <e-column field='NoFactura' headerText='No. Factura' textAlign='Right' type="number" width='200px'></e-column>
+            <e-column field='Fecha' headerText='Fecha' textAlign='Right' format='dd/MMM/yyyy' width='200px'></e-column>
+            <e-column field='Credito' headerText='Credito' textAlign='Right' type="number" width='200px'></e-column>
+            <e-column field='Comentario' headerText='Comentario' textAlign='Center' type="string" width='200px'></e-column>
+            <e-column field='NoPedido' headerText='No. Pedido' textAlign='Right' type="number" width='200px'></e-column>
+            <e-column field='CodigoCliente' headerText='Código Cliente'   width='200px'></e-column>
+            <e-column field='NIT' headerText='Nit'   width='200px'></e-column>
+            <e-column field='Cliente' headerText='Cliente'   width='200px'></e-column>
+            <e-column field='CodigoVendedor' headerText='Código Vendedor'  width='200px'></e-column>
+            <e-column field='Vendedor' headerText='Vendedor'   width='200px'></e-column>
+            <e-column field='CodigoProducto' headerText='Código Producto'   width='200px'></e-column>
+            <e-column field='NombreProducto' headerText='Nombre Producto'   width='200px'></e-column>
+            <e-column field='FamiliaProducto' headerText='Familia Producto'  width='200px'></e-column>
+            <e-column field='TipoProducto' headerText='Tipo Producto'  width='200px'></e-column>
+            <e-column field='LineaProducto' headerText='Linea Producto'  type="string" width='200px'></e-column>
+            <e-column field='ClaseProducto' headerText='Clase Producto'  type="string" width='200px'></e-column>
+            <e-column field='CantidadVenta' headerText='Cantidad Venta' textAlign='Right' type="number" width='200px'></e-column>
+            <e-column field='PrecioUnitario' headerText='Precio Unitario' textAlign='Right' type="number" width='200px'></e-column>
+            <e-column field='Total' headerText='TOTAL' textAlign='Right' type="number" width='200px'></e-column>
+        </e-columns>
+        </ejs-grid>
+</div>
